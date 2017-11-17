@@ -4,12 +4,12 @@ APPROVED = ['firstNames.txt', 'lastNames.txt']
 def getEntries(file):
 	# returns a list of entries from filename
 
-	F.seek(0)
-	F.readline()				#skip past entry count
+	file.seek(0)
+	file.readline()				#skip past entry count
 
 	entries = []
 
-	for line in F:
+	for line in file:
 		entries.append(line.rstrip())
 
 	return entries
